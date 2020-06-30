@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 24, 2017 8:17:50 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.projetocursoshibernate.Pagamento" table="PAGAMENTO" optimistic-lock="version">
+        <composite-id name="id" class="com.projetocursoshibernate.PagamentoId">
+            <key-property name="cpf" type="long">
+                <column name="CPF"  scale="0" />
+            </key-property>
+            <key-property name="cdcurso" type="long">
+                <column name="CDCURSO"  scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="datainscricao" type="string">
+            <column name="datadeinscricao" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
